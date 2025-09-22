@@ -1,9 +1,9 @@
 import Button from "./Button"
 
-const Display = ({id, name, phone, handlePersonDelete}) => {
+const Display = ({id, name, number, handlePersonDelete}) => {
   return(
     <div>
-      <p>{name} {phone}</p>
+      <p>{name} {number}</p>
       <Button id = {id} handlePersonDelete = {handlePersonDelete}/>
     </div>
   )

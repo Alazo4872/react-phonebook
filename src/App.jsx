@@ -53,7 +53,7 @@ const App = () => {
       if(window.confirm(`${newName} is already added to the phonebook replace phone number with a new one?`)){
         const newObject = {
           name: newName,
-          phone: newPhone,
+          number: newPhone,
         }
         const person = persons.find(p => p.name === newName)
   
@@ -76,7 +76,7 @@ const App = () => {
   else{
     const nameObject = {
       name: newName,
-      phone: newPhone
+      number: newPhone
     }
     personConnect
       .create(nameObject)
