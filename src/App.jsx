@@ -46,10 +46,10 @@ const App = () => {
   }
   const addPerson = (event) => {
     event.preventDefault()
-    if(persons.some(person => person.name === newName && person.phone === newPhone)){
+    if(persons.some(person => person.name === newName && person.number === newPhone)){
     alert(`${newName} already exists!`)
   }
-    else if(persons.some(person => person.name === newName && person.phone !== newPhone)){
+    else if(persons.some(person => person.name === newName && person.number !== newPhone)){
       if(window.confirm(`${newName} is already added to the phonebook replace phone number with a new one?`)){
         const newObject = {
           name: newName,
