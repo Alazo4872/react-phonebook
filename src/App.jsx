@@ -84,6 +84,10 @@ const App = () => {
         setPersons(persons.concat(data))
         setExecuteMessage(`Added ${data.name}`)
         setTimeout(() => setExecuteMessage(null), 5000 )
+      }).catch(error => {
+        console.log(error.response.data.error)
+        setExecuteMessage(error.response.data.error)
+        setTimeout(() => {setExecuteMessage(null), 5000})
       })
   }
   }
