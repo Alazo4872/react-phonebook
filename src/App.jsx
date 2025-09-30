@@ -85,9 +85,11 @@ const App = () => {
         setExecuteMessage(`Added ${data.name}`)
         setTimeout(() => setExecuteMessage(null), 5000 )
       }).catch(error => {
-        console.log(error.response.data.error)
+        setIsError(true)
         setExecuteMessage(error.response.data.error)
-        setTimeout(() => {setExecuteMessage(null), 5000})
+        setTimeout(() => {setExecuteMessage(null)
+          setIsError(false)
+        }, 5000)
       })
   }
   }
